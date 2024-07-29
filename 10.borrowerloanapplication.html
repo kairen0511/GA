@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiles Lending - Borrower Lending</title>
+    <style>
+        html {
+            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #13072E; /* Updated background color */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .button {
+            background-color: #81039B; /* Updated button color */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        main {
+            padding: 2rem;
+        }
+        .form-section {
+            background-color: #490B3D; /* Updated section background color */
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E0E2F; /* Updated input background color */
+            color: white;
+        }
+        .form-group input[type="file"] {
+            padding: 0.5rem 0;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .cta-btn {
+            background-color: #81039B; /* Updated button color */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <span>Smiles Lending.</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.homepage.html">Home</a></li>
+                <li><a href="7.typesoflending.html">Lendings</a></li>
+                <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
+                <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
+                <li><a href="14.investorhome.html">Investor Lending</a></li>
+                <li><a href="20.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="button">How to loan?</button>
+    </header>
+    <main>
+        <section class="form-section">
+            <h1>Borrower Lending</h1>
+            <p>Loan Application:</p>
+            <form id="loan-application-form">
+                <div class="form-group">
+                    <label for="amount-loaned">Amount Loaned:</label>
+                    <input type="number" id="amount-loaned" name="amount-loaned" placeholder="Enter loan amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="loan-type">Type of loan:</label>
+                    <select id="loan-type" name="loan-type" required>
+                        <option value="">Select loan type</option>
+                        <option value="personal">Personal Loans</option>
+                        <option value="business">Business Loans</option>
+                        <option value="real-estate">Real Estate Loans</option>
+                        <option value="invoice-financing">Invoice Financing</option>
+                        <option value="student">Student Loans</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="repayment-term">Repayment Term:</label>
+                    <input type="text" id="repayment-term" name="repayment-term" placeholder="Enter repayment term" required>
+                </div>
+                <div class="form-group">
+                    <label for="collateral">Collateral:</label>
+                    <input type="text" id="collateral" name="collateral" placeholder="Enter collateral (if any)">
+                </div>
+                <div class="cta-buttons">
+                    <button type="submit" class="cta-btn">Next</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('loan-application-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+            window.location.href ='11.borrowerdocsub.html';
+        });
+    </script>
+</body>
+</html>

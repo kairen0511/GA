@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Money Laundering Dashboard</title>
+    <style>
+        html {
+            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #13072E;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #13072E;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .button {
+            background-color: #81039B;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        main {
+            padding: 2rem;
+        }
+        .dashboard-section {
+            background-color: #490B3D;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .dashboard-section h2 {
+            margin-top: 0;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+        th {
+            background-color: #81039B;
+        }
+        .highlight {
+            background-color: #61002B;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <span>Smiles Lending</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.homepage.html">Home</a></li>
+                <li><a href="7.typesoflending.html">Lendings</a></li>
+                <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
+                <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
+                <li><a href="14.investorhome.html">Investor Lending</a></li>
+                <li><a href="20.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="button">How to withdraw earnings and repayments?</button>
+    </header>
+    <main>
+        <section class="dashboard-section">
+            <h2>Transaction Patterns</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>User ID</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TX12345</td>
+                            <td>User001</td>
+                            <td>$5000</td>
+                            <td>2024-07-01</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>TX12346</td>
+                            <td>User002</td>
+                            <td>$20000</td>
+                            <td>2024-07-02</td>
+                            <td>Suspicious</td>
+                        </tr>
+                        <tr>
+                            <td>TX12347</td>
+                            <td>User001</td>
+                            <td>$7500</td>
+                            <td>2024-07-03</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>TX12348</td>
+                            <td>User003</td>
+                            <td>$50000</td>
+                            <td>2024-07-04</td>
+                            <td>Suspicious</td>
+                        </tr>
+                        <tr>
+                            <td>TX12349</td>
+                            <td>User004</td>
+                            <td>$1500</td>
+                            <td>2024-07-05</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <h2>User Behavior</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Total Transactions</th>
+                            <th>Total Amount</th>
+                            <th>Last Transaction Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>User001</td>
+                            <td>2</td>
+                            <td>$12500</td>
+                            <td>2024-07-03</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>User002</td>
+                            <td>1</td>
+                            <td>$20000</td>
+                            <td>2024-07-02</td>
+                        </tr>
+                        <tr>
+                            <td>User003</td>
+                            <td>1</td>
+                            <td>$50000</td>
+                            <td>2024-07-04</td>
+                        </tr>
+                        <tr>
+                            <td>User004</td>
+                            <td>1</td>
+                            <td>$1500</td>
+                            <td>2024-07-05</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('completion-btn').addEventListener('click', function() {
+                // Display the completion alert
+                alert('Your loan process has ended. Thank you!');
+            });
+        });
+    </script>
+</body>
+</html>

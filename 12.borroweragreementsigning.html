@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiles Lending - Loan Agreement</title>
+    <style>
+        html {
+            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #13072E; /* Updated background color */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #13072E; /* Updated header background color */
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .button {
+            background-color: #81039B; /* Updated button color */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        main {
+            padding: 2rem;
+        }
+        .agreement-section {
+            background-color: #490B3D; /* Updated section background color */
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .details {
+            margin-bottom: 2rem;
+        }
+        .details p {
+            margin: 0.5rem 0;
+        }
+        form {
+            margin-top: 1rem;
+        }
+        input[type="file"] {
+            background-color:#490B3D ; /* Updated input background color */
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+        .cta-btn {
+            background-color: #81039B; /* Updated button color */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <span>Smiles Lending</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.homepage.html">Home</a></li>
+                <li><a href="7.typesoflending.html">Lendings</a></li>
+                <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
+                <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
+                <li><a href="14.investorhome.html">Investor Lending</a></li>
+                <li><a href="20.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="button">Learn how to sign in document</button>
+    </header>
+    <main>
+        <section class="agreement-section">
+            <h1>Loan Agreement</h1>
+            <div class="details">
+                <p><strong>Amount Loaned:</strong> 10,000</p>
+                <p><strong>Type of Loan:</strong> Student Loan</p>
+                <p><strong>Repayment Term:</strong> 12 months</p>
+                <p><strong>Collateral:</strong> Car</p>
+                <p><strong>Fees:</strong>1%</p>
+                <p><strong>Funds raised:</strong> 9,900</p>
+            </div>
+            <h2>Document Submission for Signature:</h2>
+            <form>
+                <label for="signature">Signature</label>
+                <input type="file" id="signature" name="signature" placeholder="Put in signature file">
+            </form>
+            <div class="cta-buttons">
+                <button class="cta-btn" onclick="submitForm()">Submit for Signature</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        function submitForm() {
+            // Display the initial submission alert
+            alert('Document submission initiated.');
+            
+            // Show confirmation alert for signing
+            setTimeout(function() {
+                alert('Document signed successfully.');
+                
+                // Redirect to the specified page
+                window.location.href = '13.borrowerfundsdisbursementrepaymentandcomplete.html';
+            }, 1000); // Delay of 1 second before showing the second alert
+        }
+    </script>
+</body>
+</html>

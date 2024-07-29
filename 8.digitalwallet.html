@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiles Lending</title>
+    <style>
+        html {
+            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E0E2F;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1E0E2F; /* Same as body background */
+            padding: 20px;
+        }
+        .header img {
+            width: 50px;
+            height: auto;
+        }
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+        .header nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .register-btn {
+            background-color: #9F2BF0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .content, .digital-wallet, .transactions {
+            background-color: #490B3D;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .start-btn, .actions button {
+            background-color: #9F2BF0;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .actions {
+            text-align: center;
+        }
+        .transaction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .transaction-table th, .transaction-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .transaction-table th {
+            background-color: #9F2BF0;
+        }
+        .transaction-table td {
+            background-color: #3D2A54;
+        }
+        .transaction-table td.completed {
+            color: #00FF00;
+        }
+        .transaction-table td.failed {
+            color: #FF0000;
+        }
+        #password-reset-modal {
+            background-color: #490B3D;
+            border: 2px solid #9F2BF0;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            margin: 20px auto;
+            color: white;
+        }
+        #password-reset-modal input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        #password-reset-modal button {
+            background-color: #9F2BF0;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <nav>
+                <ul>
+                    <li><a href="1.homepage.html">Home</a></li>
+                    <li><a href="7.typesoflending.html">Lendings</a></li>
+                    <li><a href="8.digitalwalletinterface.html">Digital Wallet</a></li>
+                    <li><a href="14.borrowerhome.html">Borrower Lending</a></li>
+                    <li><a href="14.investorhome.html">Investor Lending</a></li>
+                    <li><a href="20.contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="4.signup.html" class="register-btn">Register</a>
+        </div>
+
+        <div class="digital-wallet">
+            <h2>Digital Wallet: <span id="wallet-owner">24GB</span></h2>
+            <p>Wallet Balance: <span id="wallet-balance">200</span></p>
+            <p>Total withdrawal: <span id="total-withdrawal">50</span></p>
+            <p>Total Invested: <span id="total-invested">100</span></p>
+            <p>Total interest repaid: <span id="total-interest-repaid">0</span></p>
+            <p>Total funding amount: <span id="total-funding-amount">100</span></p>
+            <p>Remaining Loan Balance: <span id="remaining-loan-balance">0</span></p>
+            <p>Bank Account: <span id="bank-account">DBS Account</span></p>
+            <p>Number: <span id="account-number">123 789 654</span></p>
+        </div>
+
+        <div class="transactions">
+            <h2>Transaction History:</h2>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Payment Date</th>
+                        <th>Transaction Type</th>
+                        <th>Amount ($)</th>
+                        <th>Status</th>
+                        <th>Receiver</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Predefined Data -->
+                    <tr>
+                        <td>6/24/2024</td>
+                        <td>Top up</td>
+                        <td>100</td>
+                        <td class="completed">Completed</td>
+                        <td>Wallet</td>
+                        <td>Successful transaction</td>
+                    </tr>
+                    <tr>
+                        <td>6/12/2024</td>
+                        <td>Top up</td>
+                        <td>200</td>
+                        <td class="completed">Completed</td>
+                        <td>Wallet</td>
+                        <td>Successful transaction</td>
+                    </tr>
+                    <tr>
+                        <td>6/4/2024</td>
+                        <td>Top up</td>
+                        <td>300</td>
+                        <td class="completed">Completed</td>
+                        <td>Wallet</td>
+                        <td>Successful transaction</td>
+                    </tr>
+                    <tr>
+                        <td>6/2/2024</td>
+                        <td>Withdraw</td>
+                        <td>-100</td>
+                        <td class="completed">Completed</td>
+                        <td>Client account</td>
+                        <td>Successful transaction</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+            <button onclick="repayLoan()">Repay Loans</button>
+            <button onclick="reviewTransactions()">Review Transactions</button>
+            <button onclick="showPasswordReset()">Reset Password</button>
+            <button onclick="enterDetails()">Enter Details for transactions</button>
+        </div>
+
+        <!-- Password Reset Modal -->
+        <div id="password-reset-modal" style="display:none;">
+            <h3>Reset Wallet Password</h3>
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" placeholder="Enter new password">
+            <button onclick="resetPassword()">Submit</button>
+            <button onclick="hidePasswordReset()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let walletPassword = 'kairen123'; // Initial password
+            const walletBalanceElement = document.getElementById('wallet-balance');
+            const totalWithdrawalElement = document.getElementById('total-withdrawal');
+            const totalInvestedElement = document.getElementById('total-invested');
+            const totalInterestRepaidElement = document.getElementById('total-interest-repaid');
+            const totalFundingAmountElement = document.getElementById('total-funding-amount');
+            const remainingLoanBalanceElement = document.getElementById('remaining-loan-balance'); // New Element
+
+            let walletBalance = parseInt(walletBalanceElement.innerText);
+            let totalWithdrawal = parseInt(totalWithdrawalElement.innerText);
+            let totalInvested = parseInt(totalInvestedElement.innerText);
+            let totalInterestRepaid = parseInt(totalInterestRepaidElement.innerText);
+            let totalFundingAmount = parseInt(totalFundingAmountElement.innerText);
+            let remainingLoanBalance = parseInt(remainingLoanBalanceElement.innerText); // New Variable
+
+            function updateDisplay() {
+                walletBalanceElement.innerText = walletBalance;
+                totalWithdrawalElement.innerText = totalWithdrawal;
+                totalInvestedElement.innerText = totalInvested;
+                totalInterestRepaidElement.innerText = totalInterestRepaid;
+                totalFundingAmountElement.innerText = totalFundingAmount;
+                remainingLoanBalanceElement.innerText = remainingLoanBalance; // Update Display
+            }
+            
+            function getCurrentDate() {
+                const date = new Date();
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const year = date.getFullYear();
+                return `${month}/${day}/${year}`;
+            }
+
+            function authorizeTransaction(callback) {
+                const enteredPassword = prompt('Enter wallet password:');
+                if (enteredPassword === walletPassword) {
+                    callback();
+                } else {
+                    alert('Incorrect password. Transaction aborted.');
+                }
+            }
+
+            function showPasswordReset() {
+                document.getElementById('password-reset-modal').style.display = 'block';
+            }
+
+            function hidePasswordReset() {
+                document.getElementById('password-reset-modal').style.display = 'none';
+            }
+
+            function resetPassword() {
+                const newPassword = document.getElementById('new-password').value;
+                if (newPassword.trim() === '') {
+                    alert('Password cannot be empty.');
+                    return;
+                }
+                walletPassword = newPassword;
+                alert('Password successfully updated.');
+                hidePasswordReset();
+            }
+
+            function deposit() {
+                authorizeTransaction(() => {
+                    const amount = parseInt(prompt('Deposit Details: Enter amount you wish to deposit to your digital wallet:'));
+                    if (isNaN(amount) || amount <= 0) {
+                        alert('Invalid amount');
+                        return;
+                    }
+                    const confirmMessage = `You are about to deposit $${amount}. Please confirm.`;
+                    if (!confirm(confirmMessage)) {
+                        alert('Transaction not authorized. Deposit canceled.');
+                        return;
+                    }
+                    walletBalance += amount;
+                    totalFundingAmount += amount;
+                    addTransaction('Top up', amount, 'Completed', 'Wallet', 'Successful transaction');
+                    alert(`Deposited $${amount}. New balance: $${walletBalance}`);
+                    reviewTransactions(); // Alert user to review transactions
+                    updateDisplay();
+                });
+            }
+
+            function withdraw() {
+                authorizeTransaction(() => {
+                    const amount = parseInt(prompt('Withdraw Details: Enter amount to withdraw:'));
+                    if (isNaN(amount) || amount <= 0 || amount > walletBalance) {
+                        alert('Invalid amount');
+                        return;
+                    }
+                    const confirmMessage = `You are about to withdraw $${amount}. Please confirm.`;
+                    if (!confirm(confirmMessage)) {
+                        alert('Transaction not authorized. Withdrawal canceled.');
+                        return;
+                    }
+                    walletBalance -= amount;
+                    totalWithdrawal += amount;
+                    addTransaction('Withdraw', -amount, 'Completed', 'Client account', 'Successful transaction');
+                    alert(`Withdrew $${amount}. New balance: $${walletBalance}`);
+                    reviewTransactions(); // Alert user to review transactions
+                    updateDisplay();
+                });
+            }
+
+            function repayLoan() {
+                authorizeTransaction(() => {
+                    const amount = parseInt(prompt('Repay Details: Enter amount to repay:'));
+                    if (isNaN(amount) || amount <= 0 || amount > walletBalance) {
+                        alert('Invalid amount');
+                        return;
+                    }
+                    const confirmMessage = `You are about to repay $${amount}. Please confirm.`;
+                    if (!confirm(confirmMessage)) {
+                        alert('Transaction not authorized. Repayment canceled.');
+                        return;
+                    }
+                    walletBalance -= amount;
+                    totalInterestRepaid += amount;
+                    remainingLoanBalance -= amount; // Update remaining loan balance
+                    addTransaction('Repay', -amount, 'Completed', 'Loan account', 'Successful transaction');
+                    alert(`Repaid $${amount} towards loan. New balance: $${walletBalance}`);
+                    reviewTransactions(); // Alert user to review transactions
+                    updateDisplay();
+                });
+            }
+
+            function addTransaction(type, amount, status, receiver, description) {
+                const table = document.querySelector('.transaction-table tbody');
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${getCurrentDate()}</td>
+                    <td>${type}</td>
+                    <td>${amount}</td>
+                    <td class="${status.toLowerCase()}">${status}</td>
+                    <td>${receiver}</td>
+                    <td>${description}</td>
+                `;
+                table.appendChild(newRow);
+
+                // Alert user if the transaction status is not successful
+                if (status.toLowerCase() !== 'completed') {
+                    alert(`Transaction failed: ${description}`);
+                }
+            }
+
+            function reviewTransactions() {
+                const tableRows = document.querySelectorAll('.transaction-table tbody tr');
+                let transactionSummary = 'Transaction History:\n\n';
+                tableRows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    const date = cells[0].innerText;
+                    const type = cells[1].innerText;
+                    const amount = cells[2].innerText;
+                    const status = cells[3].innerText;
+                    const receiver = cells[4].innerText;
+                    const description = cells[5].innerText;
+                    transactionSummary += `Date: ${date}, Type: ${type}, Amount: $${amount}, Status: ${status}, Receiver: ${receiver}, Description: ${description}\n`;
+                });
+                alert(transactionSummary);
+            }
+            // Phone number prompt function
+            function enterDetails() {
+                let phoneNumber = prompt("Please enter your phone number to receive an SMS code:");
+                let paymenttype= prompt("Please enter your payment type to allow transactions:");
+                if (phoneNumber) {
+                    alert("SMS code sent to " + phoneNumber);
+                    // Here you can add the logic to send the SMS code
+                } else {
+                    alert("Phone number cannot be empty.");
+                }
+                if (paymenttype) {
+                    alert("Transaction done to " + paymenttype);
+                    // Here you can add the logic to send the SMS code
+                } else {
+                    alert("Payment Type cannot be empty.");
+                }
+            }
+
+
+            window.deposit = deposit;
+            window.withdraw = withdraw;
+            window.repayLoan = repayLoan;
+            window.reviewTransactions = reviewTransactions;
+            window.showPasswordReset = showPasswordReset;
+            window.hidePasswordReset = hidePasswordReset;
+            window.resetPassword = resetPassword;
+            window.enterDetails = enterDetails;
+        });
+            
+    </script>
+</body>
+</html>

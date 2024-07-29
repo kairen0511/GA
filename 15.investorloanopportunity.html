@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiles Lending - Review Borrower Loans</title>
+    <style>
+        html {
+            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #13072E;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #13072E;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .button, .cta-btn {
+            background-color: #81039B;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        main {
+            padding: 2rem;
+        }
+        .form-section, .details-section {
+            background-color: #490B3D;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E0E2F;
+            color: white;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .risk-high {
+            color: #ff0000; /* Red */
+        }
+        .risk-medium {
+            color: #ffa500; /* Orange */
+        }
+        .risk-low {
+            color: #00ff00; /* Green */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <span>Smiles Lending</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.homepage.html">Home</a></li>
+                <li><a href="7.typesoflending.html">Lendings</a></li>
+                <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
+                <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
+                <li><a href="14.investorhome.html">Investor Lending</a></li>
+                <li><a href="20.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="button">How to choose good loans?</button>
+    </header>
+    <main>
+        <section class="form-section">
+            <h1>Review Borrower Loans</h1>
+            <p>Select a loan to view details:</p>
+            <form id="loan-selection-form">
+                <div class="form-group">
+                    <label for="loan-selection">Select Loan:</label>
+                    <select id="loan-selection" name="loan-selection" required>
+                        <option value="">Select loan</option>
+                        <option value="loan1">Loan 1</option>
+                        <option value="loan2">Loan 2</option>
+                        <option value="loan3">Loan 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="cta-buttons">
+                    <button type="submit" class="cta-btn">View Details</button>
+                </div>
+            </form>
+            <a href="16.investorloaning.html"><button class="button">Next</button></a>
+            <div id="loan-details" class="details-section" style="display: none;">
+                <h2>Loan Details</h2>
+                <p><strong>Amount Loaned:</strong> <span id="display-amount"></span></p>
+                <p><strong>Type of Loan:</strong> <span id="display-loan-type"></span></p>
+                <p><strong>Repayment Term (in years):</strong> <span id="display-repayment-term"></span></p>
+                <p><strong>Collateral:</strong> <span id="display-collateral"></span></p>
+                <p><strong>Risk Level:</strong> <span id="display-risk" class=""></span></p>
+                <p><strong>Suggested Interest Rate:</strong> <span id="display-interest"></span></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        const loanData = {
+            'loan1': {
+                amount: '100,000',
+                type: 'Business Loans',
+                term: 5,
+                collateral: 'Property',
+                risk: 'High',
+                interest: '8-12%'
+            },
+            'loan2': {
+                amount: '50,000',
+                type: 'Personal Loans',
+                term: 3,
+                collateral: 'Vehicle',
+                risk: 'Medium',
+                interest: '6-8%'
+            },
+            'loan3': {
+                amount: '200,000',
+                type: 'Real Estate Loans',
+                term: 10,
+                collateral: 'Real Estate',
+                risk: 'Low',
+                interest: '4-6%'
+            }
+        };
+
+        document.getElementById('loan-selection-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedLoan = document.getElementById('loan-selection').value;
+            if (selectedLoan && loanData[selectedLoan]) {
+                const loan = loanData[selectedLoan];
+                document.getElementById('display-amount').textContent = loan.amount;
+                document.getElementById('display-loan-type').textContent = loan.type;
+                document.getElementById('display-repayment-term').textContent = loan.term + ' years';
+                document.getElementById('display-collateral').textContent = loan.collateral;
+                document.getElementById('display-risk').textContent = loan.risk;
+                document.getElementById('display-risk').className = 'risk-' + loan.risk.toLowerCase();
+                document.getElementById('display-interest').textContent = loan.interest;
+                document.getElementById('loan-details').style.display = 'block';
+            } else {
+                alert('Please select a valid loan.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiles Lending - Fund Pool and Portfolio Management</title>
+    <style>
+        html {
+            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #13072E;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #13072E;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .button {
+            background-color: #81039B;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        main {
+            padding: 2rem;
+        }
+        .form-section, .regulation-section {
+            background-color: #490B3D;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .investment-item {
+            background-color: #1E0E2F;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .investment-item:hover {
+            background-color: #2D1A40;
+        }
+        .cta-btn {
+            background-color: #81039B;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <span>Smiles Lending.</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.homepage.html">Home</a></li>
+                <li><a href="7.typesoflending.html">Lendings</a></li>
+                <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
+                <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
+                <li><a href="14.investorhome.html">Investor Lending</a></li>
+                <li><a href="20.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="button">How to review portfolio and pool of fund?</button>
+    </header>
+    <main>
+        <section class="regulation-section">
+            <h1>Fund Pool Management and Regulation</h1>
+            <div class="info-group">
+                <p><strong>Where the Funds Go:</strong></p>
+                <p><strong>Purpose:</strong> The funds in the pool are used to finance various investment opportunities, including supporting borrowers, funding new projects, or investing in diverse financial products.</p>
+                <p><strong>Distribution:</strong> Funds are allocated based on predefined criteria, ensuring they are used efficiently and according to the investment strategy.</p>
+            </div>
+            <div class="info-group">
+                <p><strong>Regulation and Management:</strong></p>
+                <p><strong>Regulatory Compliance:</strong> The fund pool adheres to financial regulations, including anti-money laundering (AML) laws and know-your-customer (KYC) requirements.</p>
+                <p><strong>Internal Controls:</strong> Internal controls and governance structures are in place, including regular audits and oversight by a fund management team.</p>
+                <p><strong>Investment Strategy:</strong> Managed according to a strategy formulated by financial experts, involving diversification to minimize risk and maximize returns.</p>
+                <p><strong>Transparency:</strong> Investors receive regular reports on fund allocation, performance, and any changes in the investment strategy.</p>
+            </div>
+        </section>
+        <section class="form-section">
+            <h1>Select Fund Pool</h1>
+            <div class="form-group">
+                <label for="fund-pool">Choose Fund Pool:</label>
+                <select id="fund-pool" name="fund-pool" onchange="showFundDetails()">
+                    <option value="">Select fund pool</option>
+                    <option value="pool1">Pool 1</option>
+                    <option value="pool2">Pool 2</option>
+                    <option value="pool3">Pool 3</option>
+                </select>
+            </div>
+            <div id="fund-details" style="display: none;">
+                <h2>Details for Selected Fund Pool</h2>
+                <p><strong>Fund Pool Name:</strong> <span id="pool-name"></span></p>
+                <p><strong>Description:</strong> <span id="pool-description"></span></p>
+                <p><strong>Total Funds:</strong> $<span id="pool-funds"></span></p>
+                <p><strong>Investment Type:</strong> <span id="pool-type"></span></p>
+                <p><strong>Regulation:</strong> <span id="pool-regulation"></span></p>
+            </div>
+        </section>
+        <section class="form-section">
+            <h1>Portfolio Management</h1>
+            <div class="investment-item">
+                <h2>Investment 1</h2>
+                <p><strong>Amount Invested:</strong> $100,000</p>
+                <p><strong>Type of Loan:</strong> Business Loans</p>
+                <p><strong>Term:</strong> 5 years</p>
+                <p><strong>Status:</strong> Active</p>
+            </div>
+            <div class="investment-item">
+                <h2>Investment 2</h2>
+                <p><strong>Amount Invested:</strong> $50,000</p>
+                <p><strong>Type of Loan:</strong> Personal Loans</p>
+                <p><strong>Term:</strong> 3 years</p>
+                <p><strong>Status:</strong> Active</p>
+            </div>
+            <div class="investment-item">
+                <h2>Investment 3</h2>
+                <p><strong>Amount Invested:</strong> $200,000</p>
+                <p><strong>Type of Loan:</strong> Real Estate Loans</p>
+                <p><strong>Term:</strong> 10 years</p>
+                <p><strong>Status:</strong> Completed</p>
+            </div>
+        </section>
+        <a href="18.investorearningandrepayments.html"><button class="cta-btn">Earning and repayments</button></a>
+    </main>
+    <script>
+        function showFundDetails() {
+            const fundPool = document.getElementById('fund-pool').value;
+            const fundDetails = document.getElementById('fund-details');
+
+            // Dummy data for fund pools
+            const poolData = {
+                'pool1': {
+                    name: 'Growth Fund',
+                    description: 'Focuses on high-growth investments in technology and startups.',
+                    funds: '1,000,000',
+                    type: 'Equity',
+                    regulation: 'Regulated by SEC'
+                },
+                'pool2': {
+                    name: 'Income Fund',
+                    description: 'Invests in dividend-paying stocks and bonds for steady income.',
+                    funds: '500,000',
+                    type: 'Mixed',
+                    regulation: 'Regulated by FINRA'
+                },
+                'pool3': {
+                    name: 'Balanced Fund',
+                    description: 'A balanced mix of stocks and bonds for moderate growth and income.',
+                    funds: '750,000',
+                    type: 'Balanced',
+                    regulation: 'Regulated by CFTC'
+                }
+            };
+
+            if (fundPool && poolData[fundPool]) {
+                const pool = poolData[fundPool];
+
+                document.getElementById('pool-name').textContent = pool.name;
+                document.getElementById('pool-description').textContent = pool.description;
+                document.getElementById('pool-funds').textContent = pool.funds;
+                document.getElementById('pool-type').textContent = pool.type;
+                document.getElementById('pool-regulation').textContent = pool.regulation;
+
+                fundDetails.style.display = 'block';
+            } else {
+                fundDetails.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
