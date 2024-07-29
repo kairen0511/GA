@@ -80,6 +80,11 @@
             color: white;
             cursor: pointer;
         }
+        .admin {
+            background-color: #81039B;
+            color: white;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -107,7 +112,9 @@
                 <input type="email" placeholder="hello@reallygreatsite.com" required>
                 <input type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
+                <button id="admin" type="button">Admin Login</button>
             </form>
+
         </section>
     </main>
     <script>
@@ -126,6 +133,17 @@
                 
                 // Redirect to the login page after showing the alert
                 window.location.href = '6.identityverify.html';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const admin = document.getElementById('admin');
+            
+            admin.addEventListener('click', () => {
+
+                alert('Logging in admin account.....Please wait a while!');
+                
+                // Redirect to the login page after showing the alert
+                window.location.href = '19.dashboard.html';
             });
         });
     </script>
