@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Smiles Lending offers innovative peer-to-peer lending services to empower your financial goals.">
     <title>Smiles Lending</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         html {
             font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
@@ -21,6 +23,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem; 
+            flex-wrap: wrap;
         }
         .logo {
             display: flex;
@@ -63,13 +66,16 @@
             background-color: #490B3D;
             border-radius: 0.625rem;
             margin: 2rem;
+            flex-wrap: wrap;
         }
         .hero-content {
             flex: 1;
             padding-right: 2rem;
+            min-width: 300px;
         }
         .hero-image {
             flex: 1;
+            min-width: 300px;
         }
         .hero-image img {
             max-width: 
@@ -79,6 +85,8 @@
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .cta-btn {
             background-color: #81039B;
@@ -91,39 +99,44 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="d-flex flex-wrap justify-content-between align-items-center p-3">
         <div class="logo">
-            <img src="imagesneeded/Smiles.png" alt="Smiles Lending Logo">
+            <img src="imagesneeded/Smiles.png" class="img-fluid" alt="Smiles Lending Logo">
             <span>Smiles Lending.</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="7.typesoflending.html">Lendings</a></li>
-                <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
-                <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
-                <li><a href="14.investorhome.html">Investor Lending</a></li>
-                <li><a href="20.contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="4.signup.html">
-            <button class="register-btn">Register</button>
-        </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="7.typesoflending.html">Lendings</a></li>
+                    <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
+                    <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
+                    <li><a href="14.investorhome.html">Investor Lending</a></li>
+                    <li><a href="20.contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="4.signup.html" class="register-btn">Register</a>
+        </div>
+        
+
     </header>
     <main>
         <section id="hero">
-            <div class="hero-content">
-                <h1>Smiles Lending services.</h1>
-                <h2>Empower your financials with us.</h2>
-                <p>P2P Lending is a way for individuals to lend and borrow money. We hold funds in a pool for borrowers to lend, and investor risk is lessened when many investors take from the pool as the different borrowers have different credits.</p>
-                <div class="cta-buttons">
-                    <a href="2.whychooseus.html"><button class="cta-btn" id ="why-choose-us-btn">Why choose us?</button></a>
+                <div class="hero-content">
+                    <h1>Smiles Lending services.</h1>
+                    <h2>Empower your financials with us.</h2>
+                    <p>P2P Lending is a way for individuals to lend and borrow money. We hold funds in a pool for borrowers to lend, and investor risk is lessened when many investors take from the pool as the different borrowers have different credits.</p>
+                    <div class="cta-buttons">
+                        <a href="3.login.html"><button class="cta-btn" id ="login-btn">Login</button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="imagesneeded/computerperson.png" alt="Person using a laptop for online lending">
-            </div>
+                <div class="hero-image">
+                    <img src="imagesneeded/computerperson.png" alt="Person using a laptop for online lending">
+                </div>
         </section>
     </main>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
