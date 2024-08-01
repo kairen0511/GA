@@ -19,30 +19,10 @@
             padding: 0;
         }
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem; 
-            flex-wrap: wrap;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
+            background-color: #13072E;
         }
         .logo img {
             width: 2.5rem; 
-            margin-right: 0.625rem; 
-        }
-        nav ul {
-            display: flex;
-            list-style-type: none;
-        }
-        nav ul li {
-            margin-right: 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
         }
         .register-btn {
             background-color: #81039B;
@@ -52,43 +32,7 @@
             border-radius: 1.25rem;
             cursor: pointer;
         }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-        #hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem;
-            background-color: #490B3D;
-            border-radius: 0.625rem;
-            margin: 2rem;
-            flex-wrap: wrap;
-        }
-        .hero-content {
-            flex: 1;
-            padding-right: 2rem;
-            min-width: 300px;
-        }
-        .hero-image {
-            flex: 1;
-            min-width: 300px;
-        }
-        .hero-image img {
-            max-width: 
-            border-radius 0.625rem;
-        }
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .cta-btn {
+        .login-btn{
             background-color: #81039B;
             color: white;
             border: none;
@@ -96,42 +40,64 @@
             border-radius: 1.25rem;
             cursor: pointer;
         }
+        .register-btn:hover {
+            background-color: #6e0283;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 2rem;
+        }
+        #hero {
+            background-color: #490B3D;
+            border-radius: 0.625rem;
+            padding: 2rem;
+        }
+        .hero-content img {
+            max-width: 100%;
+            border-radius: 0.625rem;
+        }
     </style>
 </head>
 <body>
     <header class="d-flex flex-wrap justify-content-between align-items-center p-3">
-        <div class="logo">
+        <div class="logo d-flex align-items-center">
             <img src="imagesneeded/Smiles.png" class="img-fluid" alt="Smiles Lending Logo">
-            <span>Smiles Lending.</span>
+            <span class="ml-2">Smiles Lending</span>
         </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="7.typesoflending.html">Lendings</a></li>
-                    <li><a href="8.digitalwallet.html">Digital Wallet</a></li>
-                    <li><a href="9.borrowerhome.html">Borrower Lending</a></li>
-                    <li><a href="14.investorhome.html">Investor Lending</a></li>
-                    <li><a href="20.contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="4.signup.html" class="register-btn">Register</a>
-        </div>
-        
-
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="7.typesoflending.html">Lendings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="8.digitalwallet.html">Digital Wallet</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="9.borrowerhome.html">Borrower Lending</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="14.investorhome.html">Investor Lending</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="20.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="4.signup.html" class="register-btn">Register</a>
     </header>
     <main>
-        <section id="hero">
-                <div class="hero-content">
-                    <h1>Smiles Lending services.</h1>
-                    <h2>Empower your financials with us.</h2>
-                    <p>P2P Lending is a way for individuals to lend and borrow money. We hold funds in a pool for borrowers to lend, and investor risk is lessened when many investors take from the pool as the different borrowers have different credits.</p>
-                    <div class="cta-buttons">
-                        <a href="3.login.html"><button class="cta-btn" id ="login-btn">Login</button></a>
+        <section id="hero" class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="hero-content">
+                        <h1>Smiles Lending Services</h1>
+                        <h2>Empower Your Financials with Us</h2>
+                        <p>P2P Lending is a way for individuals to lend and borrow money. We hold funds in a pool for borrowers to lend, and investor risk is lessened when many investors take from the pool as the different borrowers have different credits.</p>
+                        <div class="cta-buttons">
+                            <a href="3.login.html"><button class="login-btn">Login</button></a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="imagesneeded/computerperson.png" alt="Person using a laptop for online lending">
+                <div class="col-md-6">
+                    <div class="hero-image">
+                        <img src="imagesneeded/computerperson.png" alt="Person using a laptop for online lending">
+                    </div>
                 </div>
+            </div>
         </section>
     </main>
     <!-- Bootstrap JS and dependencies -->
