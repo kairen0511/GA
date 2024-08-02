@@ -22,7 +22,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #13072e; /* Same as body background */
+            background-color: #13072e; 
             padding: 20px;
         }
         .header img {
@@ -378,13 +378,11 @@
                 let paymenttype= prompt("Please enter your payment type to allow transactions:");
                 if (phoneNumber) {
                     alert("SMS code sent to " + phoneNumber);
-                    // Here you can add the logic to send the SMS code
                 } else {
                     alert("Phone number cannot be empty.");
                 }
                 if (paymenttype) {
                     alert("Transaction done to " + paymenttype);
-                    // Here you can add the logic to send the SMS code
                 } else {
                     alert("Payment Type cannot be empty.");
                 }

@@ -192,21 +192,18 @@
                 const email = document.getElementById('email').value;
                 const idNumber = document.getElementById('id-number').value;
 
-                // Simulate verification success
                 alert(`Identity Verified: \nName: ${fullName}\nEmail: ${email}\nID Number: ${idNumber}`);
                 window.location.href = '2.whychooseus.html';
             });
 
             document.getElementById('singpass-btn').addEventListener('click', () => {
-                // Redirect to SingPass for verification
-                window.open('https://www.singpass.gov.sg/main', '_blank'); // Opens SingPass in a new tab
+                window.open('https://www.singpass.gov.sg/main', '_blank');
                 alert('You will be redirected to SingPass for identity verification. Please come back to complete your process.');
                 window.location.href = '2.whychooseus.html';
             });
 
             document.getElementById('jumio-btn').addEventListener('click', () => {
-                // Redirect to Jumio for verification
-                window.open('https://jumio.com', '_blank'); // Opens Jumio in a new tab
+                window.open('https://jumio.com', '_blank');
                 alert('You will be redirected to Jumio for identity verification. Please come back to complete your process.');
                 window.location.href = '2.whychooseus.html';
             });

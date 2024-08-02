@@ -1,0 +1,3 @@
+things to do for ga:
+change smiles lending text arrangement
+do bootstrap

@@ -10,7 +10,7 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #13072E; /* Updated background color */
+            background-color: #13072E;
             color: white;
             margin: 0;
             padding: 0;
@@ -20,7 +20,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background-color: #13072E; /* Updated header background color */
+            background-color: #13072E;
         }
         .logo {
             display: flex;
@@ -42,7 +42,7 @@
             text-decoration: none;
         }
         .button {
-            background-color: #81039B; /* Updated button color */
+            background-color: #81039B;
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -53,13 +53,13 @@
             padding: 2rem;
         }
         .disbursement-section {
-            background-color: #490B3D; /* Updated section background color */
+            background-color: #490B3D;
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
         }
         .details {
-            background-color: #490B3D; /* Match the color with .disbursement-section */
+            background-color: #490B3D;
             padding: 1rem;
             border-radius: 10px;
             text-align: center;
@@ -75,7 +75,7 @@
             margin-top: 2rem;
         }
         .cta-btn {
-            background-color: #81039B; /* Updated button color */
+            background-color: #81039B; 
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -84,7 +84,7 @@
         }
         .payment-status {
             margin-top: 2rem;
-            background-color: #490B3D; /* Updated section background color */
+            background-color: #490B3D; 
             border-radius: 10px;
             padding: 1rem;
         }
@@ -110,7 +110,7 @@
         }
         .repayment-calendar {
             margin-top: 2rem;
-            background-color: #490B3D; /* Updated section background color */
+            background-color: #490B3D; 
             border-radius: 10px;
             padding: 1rem;
         }
@@ -124,12 +124,12 @@
             color: white;
         }
         .repayment-calendar th, .repayment-calendar td {
-            border: 1px solid #81039B; /* Updated border color */
+            border: 1px solid #81039B; 
             padding: 0.5rem;
             text-align: left;
         }
         .repayment-calendar th {
-            background-color: #81039B; /* Updated header background color */
+            background-color: #81039B; 
         }
     </style>
 </head>
@@ -204,14 +204,12 @@
                         <td>$48.59</td>
                         <td>$18,382.53</td>
                     </tr>
-                    <!-- Add more rows as needed to match the image -->
                 </tbody>
             </table>
         </section>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Dynamic content for disbursement details
             const disbursementDetails = {
                 amount: '9,900',
                 walletEnding: '1234',
@@ -227,10 +225,9 @@
             document.getElementById('transaction-id-value').textContent = disbursementDetails.transactionId;
 
             document.getElementById('completion-btn').addEventListener('click', function() {
-                // Alert or display a completion message
                 alert('Your loan process is complete. Thank you!');
                 // Redirect to homepage
-                window.location.href = 'index.html';  // Adjust the URL as needed
+                window.location.href = 'index.html';
             });
         });
     </script>
