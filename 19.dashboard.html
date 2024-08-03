@@ -200,13 +200,12 @@
             </div>
         </section>
     </main>
+    <button class="button" onclick="revertHome()">Go back to home</button>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('completion-btn').addEventListener('click', function() {
-                // Display the completion alert
-                alert('Your loan process has ended. Thank you!');
-            });
-        });
+        function revertHome(){
+            window.location.href = 'index.html';
+        }
+
     </script>
 </body>
 </html>
