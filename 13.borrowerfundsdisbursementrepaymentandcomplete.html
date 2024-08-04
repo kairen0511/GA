@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smiles Lending - Funds Disbursement</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         html {
             font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
@@ -131,6 +132,39 @@
         .repayment-calendar th {
             background-color: #81039B; 
         }
+        .table-responsive {
+            overflow-x: auto;
+            padding-left: 1rem; /* Add padding for smaller screens */
+            padding-right: 1rem; /* Add padding for smaller screens */
+        }
+
+        @media (min-width: 576px) {
+            .table-responsive {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .table-responsive {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .table-responsive {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .table-responsive {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -179,7 +213,7 @@
 
         <section class="repayment-calendar">
             <h2>Repayment Calendar</h2>
-            <table>
+            <table class="table-responsive">
                 <thead>
                     <tr>
                         <th>Payment Date</th>
@@ -231,5 +265,8 @@
             });
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

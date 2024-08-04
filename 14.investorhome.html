@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smiles Lending - Investor Lending</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         html {
-            font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+            font-size: 16px;
         }
         body {
             font-family: Arial, sans-serif;
@@ -20,6 +21,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
+            background-color: #13072E;
         }
         .logo {
             display: flex;
@@ -32,6 +34,7 @@
         nav ul {
             display: flex;
             list-style-type: none;
+            padding: 0;
         }
         nav ul li {
             margin-right: 1rem;
@@ -53,7 +56,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh;
+            min-height: 80vh;
         }
         .investor-section {
             background-color: #490B3D;
@@ -64,16 +67,18 @@
             max-width: 1200px;
         }
         .investor-cards {
-            display: flex;
-            justify-content: space-between;
             margin-top: 2rem;
         }
         .card {
             background-color: #6A4B8F;
             padding: 1rem;
             border-radius: 10px;
-            width: 30%;
             text-align: center;
+            height: 100%; /* Ensures cards take up full height of their container */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .card h3 {
             font-size: 1.2rem;
@@ -111,25 +116,34 @@
         <section class="investor-section">
             <h1>Investor Lending</h1>
             <p>P2P lending platforms help connect investors with borrowers without the bank acting as an intermediary. Between 2014 and 2015 the value of global P2P lending was expected to rise to a value seven times what it was in 2014 - from 9 billion to 64 billion U.S. dollars. By 2050 the value is expected to be close to one trillion U.S. dollars.</p>
-            <div class="investor-cards">
-                <div class="card">
-                    <h3>#one</h3>
-                    <h2>High Interest Growth Over Time</h2>
-                    <p>Investors can set good interest rates and start lending now to get huge returns.</p>
+            <div class="row investor-cards">
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>#one</h3>
+                        <h2>High Interest Growth Over Time</h2>
+                        <p>Investors can set good interest rates and start lending now to get huge returns.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>#two</h3>
-                    <h2>Diversify Investment Portfolio</h2>
-                    <p>Doing multiples of investing can help lower risk, which means more money earned.</p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>#two</h3>
+                        <h2>Diversify Investment Portfolio</h2>
+                        <p>Doing multiples of investing can help lower risk, which means more money earned.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>#three</h3>
-                    <h2>Secure and Transparent</h2>
-                    <p>Lower risk of fraud and no hidden fees.</p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>#three</h3>
+                        <h2>Secure and Transparent</h2>
+                        <p>Lower risk of fraud and no hidden fees.</p>
+                    </div>
                 </div>
             </div>
             <a href="15.investorloanopportunity.html"><button class="cta-btn">Start with lending</button></a>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

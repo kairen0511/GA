@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smiles Lending</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         html {
             font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
@@ -62,6 +63,9 @@
             cursor: pointer;
             margin: 10px;
         }
+        .table-wrapper {
+            overflow-x: auto;
+        }
         .actions {
             text-align: center;
         }
@@ -69,6 +73,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            table-layout: fixed;
         }
         .transaction-table th, .transaction-table td {
             border: 1px solid #ddd;
@@ -144,53 +149,55 @@
 
         <div class="transactions">
             <h2>Transaction History:</h2>
-            <table class="transaction-table">
-                <thead>
-                    <tr>
-                        <th>Payment Date</th>
-                        <th>Transaction Type</th>
-                        <th>Amount ($)</th>
-                        <th>Status</th>
-                        <th>Receiver</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Predefined Data -->
-                    <tr>
-                        <td>6/24/2024</td>
-                        <td>Top up</td>
-                        <td>100</td>
-                        <td class="completed">Completed</td>
-                        <td>Wallet</td>
-                        <td>Successful transaction</td>
-                    </tr>
-                    <tr>
-                        <td>6/12/2024</td>
-                        <td>Top up</td>
-                        <td>200</td>
-                        <td class="completed">Completed</td>
-                        <td>Wallet</td>
-                        <td>Successful transaction</td>
-                    </tr>
-                    <tr>
-                        <td>6/4/2024</td>
-                        <td>Top up</td>
-                        <td>300</td>
-                        <td class="completed">Completed</td>
-                        <td>Wallet</td>
-                        <td>Successful transaction</td>
-                    </tr>
-                    <tr>
-                        <td>6/2/2024</td>
-                        <td>Withdraw</td>
-                        <td>-100</td>
-                        <td class="completed">Completed</td>
-                        <td>Client account</td>
-                        <td>Successful transaction</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Payment Date</th>
+                            <th>Transaction Type</th>
+                            <th>Amount ($)</th>
+                            <th>Status</th>
+                            <th>Receiver</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Predefined Data -->
+                        <tr>
+                            <td>6/24/2024</td>
+                            <td>Top up</td>
+                            <td>100</td>
+                            <td class="completed">Completed</td>
+                            <td>Wallet</td>
+                            <td>Successful transaction</td>
+                        </tr>
+                        <tr>
+                            <td>6/12/2024</td>
+                            <td>Top up</td>
+                            <td>200</td>
+                            <td class="completed">Completed</td>
+                            <td>Wallet</td>
+                            <td>Successful transaction</td>
+                        </tr>
+                        <tr>
+                            <td>6/4/2024</td>
+                            <td>Top up</td>
+                            <td>300</td>
+                            <td class="completed">Completed</td>
+                            <td>Wallet</td>
+                            <td>Successful transaction</td>
+                        </tr>
+                        <tr>
+                            <td>6/2/2024</td>
+                            <td>Withdraw</td>
+                            <td>-100</td>
+                            <td class="completed">Completed</td>
+                            <td>Client account</td>
+                            <td>Successful transaction</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="actions">
@@ -400,5 +407,9 @@
         });
             
     </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
