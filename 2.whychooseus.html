@@ -68,17 +68,12 @@
         #why-choose-us {
             padding: 2rem;
         }
-        .reasons-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
         .reason {
             background-color: #490B3D;
             padding: 1rem;
             border-radius: 10px;
             height: 100%;
+            margin-bottom: 1rem;
         }
         .reason-number {
             background-color: white;
@@ -112,29 +107,36 @@
     <main>
         <section id="why-choose-us">
             <h2>Why choose Smiles Lending.</h2>
-            <div class="reasons-grid">
-                <div class="reason">
-                    <span class="reason-number">#one</span>
-                    <h3>Efficiency</h3>
-                    <p>We provide fast lending processes for businesses and individuals.</p>
-                </div>
-                <div class="reason">
-                    <span class="reason-number">#two</span>
-                    <h3>Interest Earning</h3>
-                    <p>Investors can earn higher interests with lower risks with our secured peer-to-peer lending platform.</p>
-                </div>
-                <div class="reason">
-                    <span class="reason-number">#three</span>
-                    <h3>Regulatory compliance</h3>
-                    <p>We hold licenses to provide advice to customers and ensure all transactions follow rules.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="reason">
+                            <span class="reason-number">#one</span>
+                            <h3>Efficiency</h3>
+                            <p>We provide fast lending processes for businesses and individuals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="reason">
+                            <span class="reason-number">#two</span>
+                            <h3>Interest Earning</h3>
+                            <p>Investors can earn higher interests with lower risks with our secured peer-to-peer lending platform.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="reason">
+                            <span class="reason-number">#three</span>
+                            <h3>Regulatory compliance</h3>
+                            <p>We hold licenses to provide advice to customers and ensure all transactions follow rules.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="cta-buttons text-center">
-                <a href="9.borrowerhome.html"><button class="cta-btn" >Start with borrowing</button></a>
-                <a href="14.investorhome.html"><button class="cta-btn" >Start with lending</button></a>
+                <a href="9.borrowerhome.html"><button class="cta-btn">Start with borrowing</button></a>
+                <a href="14.investorhome.html"><button class="cta-btn">Start with lending</button></a>
             </div>
         </section>
-        </div>
     </main>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
