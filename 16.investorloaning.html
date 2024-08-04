@@ -143,7 +143,7 @@
     <script>
         function calculateFee() {
             const amount = document.getElementById('amount').value;
-            const fee = (amount * 0.01).toFixed(2); // 1% fee
+            const fee = (amount * 0.01).toFixed(2); // will be acording to types of lending(Not implemented yet)
             document.getElementById('fee-info').innerText = `Fee (1%): $${fee}`;
         }
         function fundsPaymentAlert(){
